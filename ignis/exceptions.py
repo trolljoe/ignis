@@ -75,6 +75,17 @@ class HyprlandIPCNotFoundError(Exception):
             *args,
         )
 
+class NiriIPCNotFoundError(Exception):
+    """
+    Raised when Niri IPC is not found.
+    """
+
+    def __init__(self, *args: object) -> None:
+        super().__init__(
+            "Niri IPC not found! To use the Niri service, ensure that Niri is running in a D-bus session.",
+            *args,
+        )
+
 
 class NetworkManagerNotFoundError(Exception):
     """
